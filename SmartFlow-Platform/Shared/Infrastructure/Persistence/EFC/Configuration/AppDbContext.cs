@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using SmartFlow_Platform.SmartFlow.Domain.Model.Aggregates;
 
-namespace SmartFlow_Platform;
+namespace SmartFlow_Platform.Shared.Infrastructure.Persistence.EFC.Configuration;
 
 public class AppDbContext : DbContext
 {
