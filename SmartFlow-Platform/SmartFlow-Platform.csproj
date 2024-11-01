@@ -15,10 +15,4 @@
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="SmartFlow\Domain\Services\" />
-      <Folder Include="SmartFlow\Interfaces\REST\Resources\" />
-      <Folder Include="SmartFlow\Interfaces\REST\Transform\" />
-    </ItemGroup>
-
 </Project>

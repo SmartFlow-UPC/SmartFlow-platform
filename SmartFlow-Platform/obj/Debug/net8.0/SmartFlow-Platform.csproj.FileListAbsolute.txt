@@ -97,3 +97,4 @@ C:\Users\Sebastian\OneDrive\Escritorio\La U Laptop\6to Ciclo Laptop\App Web\Smar
 C:\Users\Sebastian\OneDrive\Escritorio\La U Laptop\6to Ciclo Laptop\App Web\SmartFlow\SmartFlow-Platform\obj\Debug\net8.0\SmartFlow-Platform.pdb
 C:\Users\Sebastian\OneDrive\Escritorio\La U Laptop\6to Ciclo Laptop\App Web\SmartFlow\SmartFlow-Platform\obj\Debug\net8.0\SmartFlow-Platform.genruntimeconfig.cache
 C:\Users\Sebastian\OneDrive\Escritorio\La U Laptop\6to Ciclo Laptop\App Web\SmartFlow\SmartFlow-Platform\obj\Debug\net8.0\ref\SmartFlow-Platform.dll
+C:\Users\Sebastian\OneDrive\Escritorio\La U Laptop\6to Ciclo Laptop\App Web\SmartFlow\SmartFlow-Platform\obj\Debug\net8.0\SmartFlow-Platform.sourcelink.json

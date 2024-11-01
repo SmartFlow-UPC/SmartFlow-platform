@@ -1,5 +1,6 @@
 using SmartFlow_Platform.Shared.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
+using SmartFlow_Platform.Shared.Infrastructure.Persistence.EFC.Configuration;
 
 namespace SmartFlow_Platform.Shared.Infrastructure.Persistence.EFC.Repositories;
 

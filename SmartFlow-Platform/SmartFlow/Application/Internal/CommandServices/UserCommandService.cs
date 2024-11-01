@@ -18,19 +18,3 @@ public class UserCommandService
     
     public async Task DeleteUserAsync(int id) => await _userRepository.DeleteAsync(id);
 }
-
-public class RegistroCommandService
-{
-    private readonly IRegistroRepository _registroRepository;
-
-    public RegistroCommandService(IRegistroRepository registroRepository)
-    {
-        _registroRepository = registroRepository;
-    }
-
-    public async Task AddRegistroAsync(Registro registro) => await _registroRepository.AddAsync(registro);
-    
-    public async Task UpdateRegistroAsync(Registro registro) => await _registroRepository.UpdateAsync(registro);
-    
-    public async Task DeleteRegistroAsync(int id) => await _registroRepository.DeleteAsync(id);
-}
