@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmartFlow-Platform")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+24e3f66597d46c9a8e6121906257ebd56bcc572f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c69a4a80d7678f97b71b551dc0ec0d42a739fb56")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmartFlow-Platform")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmartFlow-Platform")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

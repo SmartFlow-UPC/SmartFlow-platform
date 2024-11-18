@@ -17,6 +17,11 @@ using SmartFlow_Platform.Consumos.Application.Internal.QueryServices;
 using SmartFlow_Platform.Consumos.Domain.Repositories;
 using SmartFlow_Platform.Consumos.Domain.Services;
 using SmartFlow_Platform.Consumos.Infrastructure.Repositories;
+using SmartFlow_Platform.Control.Application.Internal.CommandServices;
+using SmartFlow_Platform.Control.Application.Internal.QueryServices;
+using SmartFlow_Platform.Control.Domain.Repositories;
+using SmartFlow_Platform.Control.Domain.Services;
+using SmartFlow_Platform.Control.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -61,6 +66,11 @@ builder.Services.AddScoped<IAlarmasQueryService, AlarmasQueryService>();
 builder.Services.AddScoped<IConsumoRepository, ConsumoRepository>();
 builder.Services.AddScoped<IConsumoCommandService, ConsumoCommandService>();
 builder.Services.AddScoped<IConsumoQueryService, ConsumoQueryService>();
+
+// Control Services
+builder.Services.AddScoped<IControlRepository, ControlRepository>();
+builder.Services.AddScoped<IControlCommandService, ControlCommandService>();
+builder.Services.AddScoped<IControlQueryService, ControlQueryService>();
 
 var app = builder.Build();
 
