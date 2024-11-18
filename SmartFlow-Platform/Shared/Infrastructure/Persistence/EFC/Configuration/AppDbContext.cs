@@ -28,7 +28,6 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
         builder.Entity<User>().Property(u => u.Email).IsRequired().HasMaxLength(255);
         builder.Entity<User>().Property(u => u.Password).IsRequired();
 
-        // Configuration for Alarma entity
         builder.Entity<Alarma>(entity =>
         {
             entity.HasKey(a => a.Id);
