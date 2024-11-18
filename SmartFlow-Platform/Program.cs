@@ -1,4 +1,9 @@
 using Microsoft.EntityFrameworkCore;
+using SmartFlow_Platform.Registros.Application.Internal.CommandServices;
+using SmartFlow_Platform.Registros.Application.Internal.QueryServices;
+using SmartFlow_Platform.Registros.Domain.Repositories;
+using SmartFlow_Platform.Registros.Domain.Services;
+using SmartFlow_Platform.Registros.Infrastructure.Repositories;
 using SmartFlow_Platform.Shared.Infrastructure.Persistence.EFC.Configuration;
 using SmartFlow_Platform.Shared.Domain.Repositories;
 using SmartFlow_Platform.Shared.Infrastructure.Persistence.EFC.Repositories;
@@ -35,6 +40,10 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserCommandService, UserCommandService>();
 builder.Services.AddScoped<IUserQueryService, UserQueryService>();
+
+builder.Services.AddScoped<IRegistroRepository, RegistroRepository>();
+builder.Services.AddScoped<IRegistroCommandService, RegistroCommandService>();
+builder.Services.AddScoped<IRegistroQueryService, RegistroQueryService>();
 
 var app = builder.Build();
 

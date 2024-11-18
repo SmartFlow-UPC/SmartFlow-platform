@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sebastian\\OneDrive\\Escritorio\\La U Laptop\\6to Ciclo Laptop\\App Web\\Back-end remote\\SmartFlow-Platform\\SmartFlow-Platform.csproj": {}
+    "C:\\Users\\Sebastian\\OneDrive\\Escritorio\\La U Laptop\\6to Ciclo Laptop\\App Web\\Back-end remote\\SmartFlow\\SmartFlow-Platform\\SmartFlow-Platform.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sebastian\\OneDrive\\Escritorio\\La U Laptop\\6to Ciclo Laptop\\App Web\\Back-end remote\\SmartFlow-Platform\\SmartFlow-Platform.csproj": {
+    "C:\\Users\\Sebastian\\OneDrive\\Escritorio\\La U Laptop\\6to Ciclo Laptop\\App Web\\Back-end remote\\SmartFlow\\SmartFlow-Platform\\SmartFlow-Platform.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sebastian\\OneDrive\\Escritorio\\La U Laptop\\6to Ciclo Laptop\\App Web\\Back-end remote\\SmartFlow-Platform\\SmartFlow-Platform.csproj",
+        "projectUniqueName": "C:\\Users\\Sebastian\\OneDrive\\Escritorio\\La U Laptop\\6to Ciclo Laptop\\App Web\\Back-end remote\\SmartFlow\\SmartFlow-Platform\\SmartFlow-Platform.csproj",
         "projectName": "SmartFlow-Platform",
-        "projectPath": "C:\\Users\\Sebastian\\OneDrive\\Escritorio\\La U Laptop\\6to Ciclo Laptop\\App Web\\Back-end remote\\SmartFlow-Platform\\SmartFlow-Platform.csproj",
+        "projectPath": "C:\\Users\\Sebastian\\OneDrive\\Escritorio\\La U Laptop\\6to Ciclo Laptop\\App Web\\Back-end remote\\SmartFlow\\SmartFlow-Platform\\SmartFlow-Platform.csproj",
         "packagesPath": "C:\\Users\\Sebastian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sebastian\\OneDrive\\Escritorio\\La U Laptop\\6to Ciclo Laptop\\App Web\\Back-end remote\\SmartFlow-Platform\\obj\\",
+        "outputPath": "C:\\Users\\Sebastian\\OneDrive\\Escritorio\\La U Laptop\\6to Ciclo Laptop\\App Web\\Back-end remote\\SmartFlow\\SmartFlow-Platform\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sebastian\\AppData\\Roaming\\NuGet\\NuGet.Config"

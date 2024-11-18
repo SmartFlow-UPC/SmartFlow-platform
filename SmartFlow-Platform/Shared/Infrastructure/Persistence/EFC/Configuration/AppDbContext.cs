@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using EntityFrameworkCore.CreatedUpdatedDate.Extensions;
+using SmartFlow_Platform.Registros.Domain.Model.Aggregates;
 using SmartFlow_Platform.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions;
 
 namespace SmartFlow_Platform.Shared.Infrastructure.Persistence.EFC.Configuration;
@@ -33,4 +34,6 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
 
     // Add DbSet for User
     public DbSet<User> Users { get; set; }
+    public DbSet<Registro> Registros { get; set; }
+
 }
