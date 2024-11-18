@@ -5,6 +5,7 @@ using SmartFlow_Platform.Shared.Infrastructure.Persistence.EFC.Configuration.Ext
 namespace SmartFlow_Platform.Shared.Infrastructure.Persistence.EFC.Configuration;
 
 using User.Domain.Model.Aggregates;
+using SmartFlow_Platform.Alarmas.Domain.Model.Aggregates;
 
 public class AppDbContext(DbContextOptions options) : DbContext(options)
 {
@@ -27,10 +28,25 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
         builder.Entity<User>().Property(u => u.Email).IsRequired().HasMaxLength(255);
         builder.Entity<User>().Property(u => u.Password).IsRequired();
 
-        // Configura las convenciones de nombres en snake_case
+        // Configuration for Alarma entity
+        builder.Entity<Alarma>(entity =>
+        {
+            entity.HasKey(a => a.Id);
+            entity.Property(a => a.Dispositivo).IsRequired().HasMaxLength(255);
+            entity.Property(a => a.Tipo).IsRequired().HasMaxLength(100);
+            entity.Property(a => a.Valor).IsRequired();
+            entity.Property(a => a.Umbral).IsRequired();
+            entity.Property(a => a.Fecha).IsRequired();
+            entity.Property(a => a.Estado).IsRequired().HasMaxLength(50);
+        });
+
+        // Use snake_case naming convention for database objects
         builder.UseSnakeCaseNamingConvention();
     }
 
-    // Add DbSet for User
+    // DbSet for User
     public DbSet<User> Users { get; set; }
+
+    // DbSet for Alarma
+    public DbSet<Alarma> Alarmas { get; set; }
 }
