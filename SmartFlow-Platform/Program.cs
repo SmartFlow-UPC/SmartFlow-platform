@@ -22,6 +22,11 @@ using SmartFlow_Platform.Control.Application.Internal.QueryServices;
 using SmartFlow_Platform.Control.Domain.Repositories;
 using SmartFlow_Platform.Control.Domain.Services;
 using SmartFlow_Platform.Control.Infrastructure.Repositories;
+using SmartFlow_Platform.Registros.Application.Internal.CommandServices;
+using SmartFlow_Platform.Registros.Application.Internal.QueryServices;
+using SmartFlow_Platform.Registros.Domain.Repositories;
+using SmartFlow_Platform.Registros.Domain.Services;
+using SmartFlow_Platform.Registros.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -71,6 +76,11 @@ builder.Services.AddScoped<IConsumoQueryService, ConsumoQueryService>();
 builder.Services.AddScoped<IControlRepository, ControlRepository>();
 builder.Services.AddScoped<IControlCommandService, ControlCommandService>();
 builder.Services.AddScoped<IControlQueryService, ControlQueryService>();
+    
+// Registro Services
+builder.Services.AddScoped<IRegistroRepository, RegistroRepository>();
+builder.Services.AddScoped<IRegistroCommandService, RegistroCommandService>();
+builder.Services.AddScoped<IRegistroQueryService, RegistroQueryService>();
 
 var app = builder.Build();
 
