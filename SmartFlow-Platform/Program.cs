@@ -1,4 +1,9 @@
 using Microsoft.EntityFrameworkCore;
+using SmartFlow_Platform.Consumos.Application.Internal.CommandServices;
+using SmartFlow_Platform.Consumos.Application.Internal.QueryServices;
+using SmartFlow_Platform.Consumos.Domain.Repositories;
+using SmartFlow_Platform.Consumos.Domain.Services;
+using SmartFlow_Platform.Consumos.Infrastructure.Repositories;
 using SmartFlow_Platform.Shared.Infrastructure.Persistence.EFC.Configuration;
 using SmartFlow_Platform.Shared.Domain.Repositories;
 using SmartFlow_Platform.Shared.Infrastructure.Persistence.EFC.Repositories;
@@ -36,6 +41,10 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserCommandService, UserCommandService>();
 builder.Services.AddScoped<IUserQueryService, UserQueryService>();
 
+builder.Services.AddScoped<IConsumoRepository, ConsumoRepository>();
+builder.Services.AddScoped<IConsumoCommandService, ConsumoCommandService>();
+builder.Services.AddScoped<IConsumoQueryService, ConsumoQueryService>();
+
 var app = builder.Build();
 
 // Ensure database is created
@@ -46,7 +55,6 @@ using (var scope = app.Services.CreateScope())
     context.Database.EnsureCreated();
 }
 
-// Registrar servicios de autorización si es necesario
 builder.Services.AddAuthorization();
 
 // Configure the HTTP request pipeline.
