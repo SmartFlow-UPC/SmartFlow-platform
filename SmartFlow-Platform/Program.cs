@@ -10,21 +10,17 @@ using SmartFlow_Platform.User.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddRouting(options => options.LowercaseUrls = true);
 builder.Services.AddAuthorization();
 builder.Services.AddControllers();
 
-// Configuración estándar de Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Add Database Connection
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 if (connectionString is null)
     throw new Exception("Database connection string is not set.");
 
-// Configure Database Context
 builder.Services.AddDbContext<AppDbContext>(
     (DbContextOptionsBuilder options) =>
     {
