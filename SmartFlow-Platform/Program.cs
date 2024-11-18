@@ -7,16 +7,24 @@ using SmartFlow_Platform.User.Application.Internal.QueryServices;
 using SmartFlow_Platform.User.Domain.Repositories;
 using SmartFlow_Platform.User.Domain.Services;
 using SmartFlow_Platform.User.Infrastructure.Repositories;
+using SmartFlow_Platform.Alarmas.Application.Internal.CommandServices;
+using SmartFlow_Platform.Alarmas.Application.Internal.QueryServices;
+using SmartFlow_Platform.Alarmas.Domain.Repositories;
+using SmartFlow_Platform.Alarmas.Domain.Services;
+using SmartFlow_Platform.Alarmas.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Configure routing and controllers
 builder.Services.AddRouting(options => options.LowercaseUrls = true);
 builder.Services.AddAuthorization();
 builder.Services.AddControllers();
 
+// Swagger configuration
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Database connection configuration
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 if (connectionString is null)
     throw new Exception("Database connection string is not set.");
@@ -30,11 +38,19 @@ builder.Services.AddDbContext<AppDbContext>(
         );
     });
 
-// Dependency Injection
+// Dependency Injection Configuration
+// Shared Services
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+// User Services
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserCommandService, UserCommandService>();
 builder.Services.AddScoped<IUserQueryService, UserQueryService>();
+
+// Alarma Services
+builder.Services.AddScoped<IAlarmasRepository, AlarmasRepository>();
+builder.Services.AddScoped<IAlarmasCommandService, AlarmasCommandService>();
+builder.Services.AddScoped<IAlarmasQueryService, AlarmasQueryService>();
 
 var app = builder.Build();
 
@@ -46,10 +62,7 @@ using (var scope = app.Services.CreateScope())
     context.Database.EnsureCreated();
 }
 
-// Registrar servicios de autorización si es necesario
-builder.Services.AddAuthorization();
-
-// Configure the HTTP request pipeline.
+// Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
