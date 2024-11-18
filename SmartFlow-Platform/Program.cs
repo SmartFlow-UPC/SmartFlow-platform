@@ -12,6 +12,21 @@ using SmartFlow_Platform.Alarmas.Application.Internal.QueryServices;
 using SmartFlow_Platform.Alarmas.Domain.Repositories;
 using SmartFlow_Platform.Alarmas.Domain.Services;
 using SmartFlow_Platform.Alarmas.Infrastructure.Repositories;
+using SmartFlow_Platform.Consumos.Application.Internal.CommandServices;
+using SmartFlow_Platform.Consumos.Application.Internal.QueryServices;
+using SmartFlow_Platform.Consumos.Domain.Repositories;
+using SmartFlow_Platform.Consumos.Domain.Services;
+using SmartFlow_Platform.Consumos.Infrastructure.Repositories;
+using SmartFlow_Platform.Control.Application.Internal.CommandServices;
+using SmartFlow_Platform.Control.Application.Internal.QueryServices;
+using SmartFlow_Platform.Control.Domain.Repositories;
+using SmartFlow_Platform.Control.Domain.Services;
+using SmartFlow_Platform.Control.Infrastructure.Repositories;
+using SmartFlow_Platform.Registros.Application.Internal.CommandServices;
+using SmartFlow_Platform.Registros.Application.Internal.QueryServices;
+using SmartFlow_Platform.Registros.Domain.Repositories;
+using SmartFlow_Platform.Registros.Domain.Services;
+using SmartFlow_Platform.Registros.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -51,6 +66,21 @@ builder.Services.AddScoped<IUserQueryService, UserQueryService>();
 builder.Services.AddScoped<IAlarmasRepository, AlarmasRepository>();
 builder.Services.AddScoped<IAlarmasCommandService, AlarmasCommandService>();
 builder.Services.AddScoped<IAlarmasQueryService, AlarmasQueryService>();
+
+// Consumo Services
+builder.Services.AddScoped<IConsumoRepository, ConsumoRepository>();
+builder.Services.AddScoped<IConsumoCommandService, ConsumoCommandService>();
+builder.Services.AddScoped<IConsumoQueryService, ConsumoQueryService>();
+
+// Control Services
+builder.Services.AddScoped<IControlRepository, ControlRepository>();
+builder.Services.AddScoped<IControlCommandService, ControlCommandService>();
+builder.Services.AddScoped<IControlQueryService, ControlQueryService>();
+    
+// Registro Services
+builder.Services.AddScoped<IRegistroRepository, RegistroRepository>();
+builder.Services.AddScoped<IRegistroCommandService, RegistroCommandService>();
+builder.Services.AddScoped<IRegistroQueryService, RegistroQueryService>();
 
 var app = builder.Build();
 

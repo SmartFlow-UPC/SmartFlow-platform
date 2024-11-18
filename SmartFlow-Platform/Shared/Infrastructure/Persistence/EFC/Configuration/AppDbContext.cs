@@ -1,11 +1,14 @@
 using Microsoft.EntityFrameworkCore;
 using EntityFrameworkCore.CreatedUpdatedDate.Extensions;
+using SmartFlow_Platform.Consumos.Domain.Model.Aggregates;
+using SmartFlow_Platform.Registros.Domain.Model.Aggregates;
 using SmartFlow_Platform.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions;
 
 namespace SmartFlow_Platform.Shared.Infrastructure.Persistence.EFC.Configuration;
 
 using User.Domain.Model.Aggregates;
 using SmartFlow_Platform.Alarmas.Domain.Model.Aggregates;
+using SmartFlow_Platform.Control.Domain.Model.Aggregates;
 
 public class AppDbContext(DbContextOptions options) : DbContext(options)
 {
@@ -48,4 +51,13 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
 
     // DbSet for Alarma
     public DbSet<Alarma> Alarmas { get; set; }
+
+    // DbSet for Consumos
+    public DbSet<Consumo> Consumos { get; set; }
+
+    // DbSet for Control
+    public DbSet<Control> Controles { get; set; }
+    
+    // DbSet for Registros
+    public DbSet<Registro> Registros { get; set; }
 }
