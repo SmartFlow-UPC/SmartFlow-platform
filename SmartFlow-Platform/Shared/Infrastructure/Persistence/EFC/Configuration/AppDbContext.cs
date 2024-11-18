@@ -5,6 +5,7 @@ using SmartFlow_Platform.Shared.Infrastructure.Persistence.EFC.Configuration.Ext
 namespace SmartFlow_Platform.Shared.Infrastructure.Persistence.EFC.Configuration;
 
 using User.Domain.Model.Aggregates;
+using SmartFlow_Platform.Control.Domain.Model.Aggregates;
 
 public class AppDbContext(DbContextOptions options) : DbContext(options)
 {
@@ -33,4 +34,6 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
 
     // Add DbSet for User
     public DbSet<User> Users { get; set; }
+    public DbSet<Control> Controles { get; set; }
+
 }

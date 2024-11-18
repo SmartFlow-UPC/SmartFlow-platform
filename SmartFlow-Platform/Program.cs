@@ -1,4 +1,9 @@
 using Microsoft.EntityFrameworkCore;
+using SmartFlow_Platform.Control.Application.Internal.CommandServices;
+using SmartFlow_Platform.Control.Application.Internal.QueryServices;
+using SmartFlow_Platform.Control.Domain.Repositories;
+using SmartFlow_Platform.Control.Domain.Services;
+using SmartFlow_Platform.Control.Infrastructure.Repositories;
 using SmartFlow_Platform.Shared.Infrastructure.Persistence.EFC.Configuration;
 using SmartFlow_Platform.Shared.Domain.Repositories;
 using SmartFlow_Platform.Shared.Infrastructure.Persistence.EFC.Repositories;
@@ -35,6 +40,10 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserCommandService, UserCommandService>();
 builder.Services.AddScoped<IUserQueryService, UserQueryService>();
+
+builder.Services.AddScoped<IControlRepository, ControlRepository>();
+builder.Services.AddScoped<IControlCommandService, ControlCommandService>();
+builder.Services.AddScoped<IControlQueryService, ControlQueryService>();
 
 var app = builder.Build();
 

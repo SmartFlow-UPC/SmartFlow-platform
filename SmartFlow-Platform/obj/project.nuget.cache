@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bAPpkKvZgD8=",
+  "dgSpecHash": "13hcnBxx4rI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sebastian\\OneDrive\\Escritorio\\La U Laptop\\6to Ciclo Laptop\\App Web\\Back-end remote\\SmartFlow-Platform\\SmartFlow-Platform.csproj",
+  "projectFilePath": "C:\\Users\\Sebastian\\OneDrive\\Escritorio\\La U Laptop\\6to Ciclo Laptop\\App Web\\Back-end remote\\SmartFlow\\SmartFlow-Platform\\SmartFlow-Platform.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sebastian\\.nuget\\packages\\entityframeworkcore.createdupdateddate\\8.0.0\\entityframeworkcore.createdupdateddate.8.0.0.nupkg.sha512",
     "C:\\Users\\Sebastian\\.nuget\\packages\\humanizer\\3.0.0-beta.54\\humanizer.3.0.0-beta.54.nupkg.sha512",
