@@ -278,3 +278,12 @@ C:\Users\Sebastian\OneDrive\Escritorio\La U Laptop\6to Ciclo Laptop\App Web\Back
 C:\Users\Sebastian\OneDrive\Escritorio\La U Laptop\6to Ciclo Laptop\App Web\Back-end remote\SmartFlow\SmartFlow-Platform\obj\Debug\net8.0\SmartFlow-Platform.pdb
 C:\Users\Sebastian\OneDrive\Escritorio\La U Laptop\6to Ciclo Laptop\App Web\Back-end remote\SmartFlow\SmartFlow-Platform\obj\Debug\net8.0\SmartFlow-Platform.genruntimeconfig.cache
 C:\Users\Sebastian\OneDrive\Escritorio\La U Laptop\6to Ciclo Laptop\App Web\Back-end remote\SmartFlow\SmartFlow-Platform\obj\Debug\net8.0\ref\SmartFlow-Platform.dll
+C:\Users\Sebastian\OneDrive\Escritorio\La U Laptop\6to Ciclo Laptop\App Web\Back-end remote\SmartFlow\SmartFlow-Platform\bin\Debug\net8.0\SmartFlow-Platform.staticwebassets.endpoints.json
+C:\Users\Sebastian\OneDrive\Escritorio\La U Laptop\6to Ciclo Laptop\App Web\Back-end remote\SmartFlow\SmartFlow-Platform\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Sebastian\OneDrive\Escritorio\La U Laptop\6to Ciclo Laptop\App Web\Back-end remote\SmartFlow\SmartFlow-Platform\obj\Debug\net8.0\staticwebassets\msbuild.SmartFlow-Platform.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\Sebastian\OneDrive\Escritorio\La U Laptop\6to Ciclo Laptop\App Web\Back-end remote\SmartFlow\SmartFlow-Platform\bin\Debug\net8.0\publish\web.config
+C:\Users\Sebastian\OneDrive\Escritorio\La U Laptop\6to Ciclo Laptop\App Web\Back-end remote\SmartFlow\SmartFlow-Platform\bin\Debug\net8.0\publish\appsettings.Development.json
+C:\Users\Sebastian\OneDrive\Escritorio\La U Laptop\6to Ciclo Laptop\App Web\Back-end remote\SmartFlow\SmartFlow-Platform\bin\Debug\net8.0\publish\appsettings.json
+C:\Users\Sebastian\OneDrive\Escritorio\La U Laptop\6to Ciclo Laptop\App Web\Back-end remote\SmartFlow\SmartFlow-Platform\bin\Debug\net8.0\publish\SmartFlow-Platform.deps.json
+C:\Users\Sebastian\OneDrive\Escritorio\La U Laptop\6to Ciclo Laptop\App Web\Back-end remote\SmartFlow\SmartFlow-Platform\bin\Debug\net8.0\publish\SmartFlow-Platform.runtimeconfig.json
+C:\Users\Sebastian\OneDrive\Escritorio\La U Laptop\6to Ciclo Laptop\App Web\Back-end remote\SmartFlow\SmartFlow-Platform\bin\Debug\net8.0\publish\SmartFlow-Platform.staticwebassets.endpoints.json
