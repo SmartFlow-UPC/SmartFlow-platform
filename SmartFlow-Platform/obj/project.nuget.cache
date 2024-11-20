@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "13hcnBxx4rI=",
+  "dgSpecHash": "leGp8n9y8lg=",
   "success": true,
   "projectFilePath": "C:\\Users\\Sebastian\\OneDrive\\Escritorio\\La U Laptop\\6to Ciclo Laptop\\App Web\\Back-end remote\\SmartFlow\\SmartFlow-Platform\\SmartFlow-Platform.csproj",
   "expectedPackageFiles": [
@@ -88,6 +88,16 @@
       "warningLevel": 1,
       "message": "SmartFlow-Platform depends on Pomelo.EntityFrameworkCore.MySql (>= 8.0.0-preview.7) but Pomelo.EntityFrameworkCore.MySql 8.0.0-preview.7 was not found. An approximate best match of Pomelo.EntityFrameworkCore.MySql 8.0.0 was resolved.",
       "libraryId": "Pomelo.EntityFrameworkCore.MySql",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Extensions.Caching.Memory' 8.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-qj66-m88j-hmgj",
+      "libraryId": "Microsoft.Extensions.Caching.Memory",
       "targetGraphs": [
         "net8.0"
       ]

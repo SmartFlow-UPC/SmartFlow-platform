@@ -41,7 +41,7 @@ builder.Services.AddSwaggerGen();
 
 // Database connection configuration
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-if (connectionString is null)
+if (string.IsNullOrEmpty(connectionString))
     throw new Exception("Database connection string is not set.");
 
 builder.Services.AddDbContext<AppDbContext>(
@@ -87,19 +87,35 @@ var app = builder.Build();
 // Ensure database is created
 using (var scope = app.Services.CreateScope())
 {
-    var services = scope.ServiceProvider;
-    var context = services.GetRequiredService<AppDbContext>();
-    context.Database.EnsureCreated();
+    try
+    {
+        var services = scope.ServiceProvider;
+        var context = services.GetRequiredService<AppDbContext>();
+        context.Database.EnsureCreated();
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error ensuring database creation: {ex.Message}");
+        throw;
+    }
 }
 
 // Configure the HTTP request pipeline
-if (app.Environment.IsDevelopment())
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
+});
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
+
+// Redirect root URL to Swagger
+app.MapGet("/", context =>
+{
+    context.Response.Redirect("/swagger");
+    return Task.CompletedTask;
+});
+
 app.Run();
